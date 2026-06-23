@@ -1,0 +1,39 @@
+.spells {
+  min-height: 100vh;
+  padding: 8rem 5vw;
+  background: radial-gradient(
+      circle at top,
+      rgba(65, 90, 255, 0.15),
+      transparent 50%
+    ),
+    #050505;
+}
+
+.spells-heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.spells-heading h2 {
+  font-size: 4rem;
+  color: #d4af37;
+  font-family: "Cinzel Decorative", serif;
+}
+
+.spells-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.spell-card {
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.spell-card h3 {
+  color: #d4af37;
+}
