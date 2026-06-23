@@ -13,11 +13,6 @@ export default function CursorTrail({ activeKind, color }) {
     if (!activeKind) {
       return;
     }
-    useEffect(() => {
-      if (!activeKind) {
-        setParticles([]);
-      }
-    }, [activeKind]);
 
     const handleMove = (e) => {
       const now = performance.now();

@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import "./ParticleLayer.css";
+import PropTypes from "prop-types";
 
 export default function ParticleLayer({ kind = "dust", count = 24 }) {
   const particles = useMemo(() => {
@@ -32,3 +33,8 @@ export default function ParticleLayer({ kind = "dust", count = 24 }) {
     </div>
   );
 }
+
+ParticleLayer.propTypes = {
+  kind: PropTypes.string,
+  count: PropTypes.number,
+};
