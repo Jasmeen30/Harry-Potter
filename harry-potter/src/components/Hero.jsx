@@ -13,7 +13,7 @@ const SCENES = [
   { id: "scene-5", start: 0.78, end: 1 },
 ];
 
-export default function Hero() {
+export default function Hero({ startTour }) {
   const containerRef = useRef(null);
   const videoRef = useRef(null);
   const sceneRefs = useRef({});
@@ -125,6 +125,8 @@ export default function Hero() {
     };
   }, []);
 
+  console.log("Hero received:", typeof startTour);
+
   return (
     <section className="hero" id="hero" ref={containerRef}>
       <video
@@ -184,7 +186,15 @@ export default function Hero() {
             Step before the ancient throne and look up into an infinite, magical
             sky.
           </p>
-          <button className="hero-cta">Enter the Wizarding World</button>
+          <button
+            ref={buttonRef}
+            onClick={() => {
+              console.log("Begin Journey Clicked");
+              nextScene();
+            }}
+          >
+            Begin Journey
+          </button>
         </div>
       </div>
     </section>
